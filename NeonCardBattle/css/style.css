@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000');
+
+body {
+    font-family: "Nunito Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #35424a;
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+form {
+    margin: 20px 0;
+}
+
+input[type="text"],
+input[type="password"],
+select {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 300px;
+}
+
+button {
+    padding: 10px;
+    background: #35424a;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+.points-display {
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    background: var(--glass-bg);
+    backdrop-filter: blur(15px);
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.points-display {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+}
+
+.points-display::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, var(--neon-cyan), var(--neon-magenta), var(--neon-yellow));
+    border-radius: 50px;
+    z-index: -1;
+    animation: borderRotate 3s linear infinite;
+}
+
+.loader {
+    border: 5px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 5px solid #3498db;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.main-nav {
+    background: #2c3e50;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.main-nav a:hover {
+    background: #34495e;
+}
+
+.nav-right {
+    float: right;
+}
